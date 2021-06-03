@@ -39,4 +39,5 @@ jobs:
         run: |
           nl=$'\n' # new line
           git checkout develop
+          gh auth login
           gh pr create --base main --title 'PR created by action' --body '### What does this PR do?'"${nl}"'Nothing'
