@@ -39,5 +39,6 @@ jobs:
         run: |
           nl=$'\n' # new line
           git checkout develop
-          gh auth login --with-token ${{ secrets.GITHUB_TOKEN }}
           gh pr create --base main --title 'PR created by action' --body '### What does this PR do?'"${nl}"'Nothing'
+        env:
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
