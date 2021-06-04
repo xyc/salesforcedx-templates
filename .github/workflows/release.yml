@@ -1,11 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
 name: Create Release PR
-inputs:
-  next-version:  # id of input
-    description: "Next version: patch, minor, major"
-    required: true
-    default: 'minor'
 
 # Controls when the action will run. 
 on:
@@ -17,6 +12,11 @@ on:
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
+    inputs:
+      next-version:  # id of input
+        description: "Next version: patch, minor, major"
+        required: true
+        default: 'minor'
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
