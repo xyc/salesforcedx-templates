@@ -39,7 +39,9 @@ jobs:
       #   run: |
       #     echo Add other actions to build,
       #     echo test, and deploy your project.
-          
+      - name: Get Latest Version
+        run: |
+          echo "Next Version: "${{ github.event.inputs.next-version }}
       - name: Create PR
         run: |
           nl=$'\n' # new line
